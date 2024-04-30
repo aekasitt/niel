@@ -1,0 +1,43 @@
+
+### byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*$py.class
+
+
+### c extensions ###
+*.so
+
+
+### distribution / packaging ###
+dist
+sdist
+wheels
+*.egg-info
+*.egg
+MANIFEST
+
+
+### environments ###
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+
+### mypy ###
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+
+### ruff ###
+.ruff_cache/
+
+
+### workspace settings ###
+.idea
+.vscode
