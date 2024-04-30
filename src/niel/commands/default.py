@@ -9,8 +9,7 @@
 #
 # HISTORY:
 # *************************************************************
-"""Module defining `default` command for `niel` cli
-"""
+"""Module defining `default` command for `niel` cli"""
 
 ### Third-party packages ###
 from click import command

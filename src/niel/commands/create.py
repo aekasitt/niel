@@ -9,8 +9,7 @@
 #
 # HISTORY:
 # *************************************************************
-"""Module defining `create` command for `niel` cli
-"""
+"""Module defining `create` command for `niel` cli"""
 
 ### Third-party packages ###
 from click import command

@@ -1,23 +1,22 @@
 #!/usr/bin/env python3.8
 # coding:utf-8
 # Copyright (C) 2024 All rights reserved.
-# FILENAME:    ~~/src/niel/commands/auth.py
+# FILENAME:    ~~/src/niel/types/action.py
 # VERSION:     0.1.0
-# CREATED:     2024-02-26 23:09
+# CREATED:     2024-04-30 13:43
 # AUTHOR:      Sitt Guruvanich <aekazitt+github@gmail.com>
 # DESCRIPTION:
 #
 # HISTORY:
 # *************************************************************
-"""Module defining `create` command for `niel` cli"""
 
 ### Third-party packages ###
-from click import command
+from pydantic import BaseModel, StrictStr, constr
 
 
-@command
-def create() -> None:
-  """Create a new rich menu"""
+class Action(BaseModel):
+  label: StrictStr
+  uri: StrictUri = constr(regex=r"^https?:\/\/.*$")
 
 
-__all__ = ["create"]
+__all__ = ("Action",)

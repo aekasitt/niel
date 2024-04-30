@@ -9,10 +9,14 @@
 #
 # HISTORY:
 # *************************************************************
-"""Module defining types to be used elsewhere within the project
-"""
+"""Module defining types to be used elsewhere within the project"""
 
 ### Local modules ###
-from src.types.area import Area
+from niel.types.action import Action
+from niel.types.area import Area
+from niel.types.bounds import Bounds
+from niel.types.rich_menu import RichMenu
+from niel.types.size import Size
 
-__all__ = ("Area",)
+
+__all__ = ("Action", "Area", "Bounds", "RichMenu", "Size")

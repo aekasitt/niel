@@ -9,8 +9,7 @@
 #
 # HISTORY:
 # *************************************************************
-"""Module defining `drop` command for `niel` cli
-"""
+"""Module defining `drop` command for `niel` cli"""
 
 ### Third-party packages ###
 from click import command
