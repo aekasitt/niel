@@ -12,16 +12,17 @@
 """Module defining `drop` command for `niel` cli"""
 
 ### Third-party packages ###
-from click import command
+from click import command, option
 
 
 @command
-def default(richmenu_id: str) -> None:
-  """Drop rich menu identified by `richmenu_id`
+@option("--rich-menu-id", help="Identifier for RichMenu object")
+def drop(rich_menu_id: str):
+  """Drop rich menu identified by `rich_menu_id`
 
   Args:
-      richmenu_id (str): _description_
+      rich_menu_id (str): _description_
   """
 
 
-__all__ = ["drop"]
+__all__ = ("drop",)

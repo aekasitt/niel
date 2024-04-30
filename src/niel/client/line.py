@@ -117,7 +117,9 @@ class Line(BaseModel):
     headers: Dict[str, str] = self.headers
     headers["Content-Type"] = "image/png"
     async with AsyncClient(headers=headers) as client:
-      return await client.post(f"{self.data_endpoint}/richmenu/{rich_menu_id}/content", content=data)
+      return await client.post(
+        f"{self.data_endpoint}/richmenu/{rich_menu_id}/content", content=data
+      )
 
 
 __all__ = ("Line",)

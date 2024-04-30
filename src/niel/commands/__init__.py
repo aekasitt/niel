@@ -14,5 +14,6 @@
 from niel.commands.auth import auth
 from niel.commands.create import create
 from niel.commands.default import default
+from niel.commands.drop import drop
 
-__all__ = ["auth", "create", "default"]
+__all__ = ("auth", "create", "default", "drop")

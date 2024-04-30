@@ -9,15 +9,15 @@
 #
 # HISTORY:
 # *************************************************************
-"""Module defining `create` command for `niel` cli"""
+"""Module defining `auth` command for `niel` cli"""
 
 ### Third-party packages ###
 from click import command
 
 
 @command
-def create() -> None:
-  """Create a new rich menu"""
+def auth() -> None:
+  """Start an authenticated session"""
 
 
-__all__ = ["create"]
+__all__ = ("auth",)
