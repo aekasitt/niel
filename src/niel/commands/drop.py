@@ -11,18 +11,31 @@
 # *************************************************************
 """Module defining `drop` command for `niel` cli"""
 
+### Standard packages ###
+from re import match
+
 ### Third-party packages ###
-from click import command, option
+from click import argument, command
+from httpx import Response
+
+### Local modules ###
+from niel.client import Line
 
 
 @command
-@option("--rich-menu-id", help="Identifier for RichMenu object")
-def drop(rich_menu_id: str):
+@argument("rich-menu-id", nargs=1)
+@argument("niel-auth-session", envvar="NIEL_AUTH_SESSION")
+def drop(niel_auth_session: str, rich_menu_id: str):
   """Drop rich menu identified by `rich_menu_id`
 
   Args:
       rich_menu_id (str): _description_
   """
+  if not match(r"^richmenu-[0-9A-Za-z]{32}$", rich_menu_id):
+    raise IOError(f"Given parameter '{rich_menu_id}' is malformed; Expected RichMenu identifier.")
+  line: Line = Line(channel_token=niel_auth_session)
+  response: Response = line.delete_menu(rich_menu_id)
+  print(response.status_code == 200)
 
 
 __all__ = ("drop",)
