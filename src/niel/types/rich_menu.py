@@ -23,7 +23,7 @@ from niel.types.size import Size
 
 class RichMenu(BaseModel):
   areas: List[Area]
-  chat_bar_text: StrictStr = Field("Tap to open", alias="charBarText")
+  chat_bar_text: StrictStr = Field("Tap to open", alias="chatBarText")
   name: StrictStr
   selected: StrictBool = False
   size: Size = Size()
