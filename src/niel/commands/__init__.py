@@ -15,6 +15,7 @@ from niel.commands.auth import auth
 from niel.commands.create import create
 from niel.commands.default import default
 from niel.commands.drop import drop
+from niel.commands.image import image
 from niel.commands.set_default import set_default
 
-__all__ = ("auth", "create", "default", "drop", "set_default")
+__all__ = ("auth", "create", "default", "drop", "image", "set_default")
