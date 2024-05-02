@@ -10,13 +10,17 @@
 # HISTORY:
 # *************************************************************
 
+### Local modules ###
+from typing import Literal
+
 ### Third-party packages ###
-from pydantic import BaseModel, StrictStr, constr
+from pydantic import BaseModel, Field, StrictStr
 
 
 class Action(BaseModel):
+  action_type: Literal["uri"] = Field("uri", alias="type")
   label: StrictStr
-  uri: StrictUri = constr(regex=r"^https?:\/\/.*$")
+  uri: StrictStr = Field(pattern=r"^https?:\/\/.*$")
 
 
 __all__ = ("Action",)
