@@ -41,8 +41,6 @@ def image(image_path: str, menu_id: str, niel_auth_session) -> None:
   line: Line = Line(channel_token=niel_auth_session)
   with open(image_path, "rb") as image_file:
     response: Response = line.upload(image_file.read(), menu_id)
-    print(response)
-    print(response.text)
     print(response.status_code == 200)
 
 
