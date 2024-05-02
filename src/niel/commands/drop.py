@@ -23,18 +23,18 @@ from niel.client import Line
 
 
 @command
-@argument("rich-menu-id", nargs=1)
+@argument("menu-id", nargs=1)
 @argument("niel-auth-session", envvar="NIEL_AUTH_SESSION")
-def drop(niel_auth_session: str, rich_menu_id: str):
-  """Drop rich menu identified by `rich_menu_id`
+def drop(menu_id: str, niel_auth_session: str) -> None:
+  """Drop rich menu identified by `menu_id`
 
   Args:
-      rich_menu_id (str): _description_
+      menu_id (str): _description_
   """
-  if not match(r"^richmenu-[0-9A-Za-z]{32}$", rich_menu_id):
-    raise IOError(f"Given parameter '{rich_menu_id}' is malformed; Expected RichMenu identifier.")
+  if not match(r"^richmenu-[0-9A-Za-z]{32}$", menu_id):
+    raise IOError(f"Given parameter '{ menu_id }' is malformed; Expected RichMenu identifier.")
   line: Line = Line(channel_token=niel_auth_session)
-  response: Response = line.delete_menu(rich_menu_id)
+  response: Response = line.delete_menu(menu_id)
   print(response.status_code == 200)
 
 

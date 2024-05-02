@@ -11,20 +11,31 @@
 # *************************************************************
 """Module defining `set_default` command for `niel` cli"""
 
+### Standard packages ###
+from re import match
+
 ### Third-party packages ###
 from click import argument, command
+from httpx import Response
+
+### Local modules ###
+from niel.client import Line
 
 
 @command
+@argument("menu-id", nargs=1)
 @argument("niel-auth-session", envvar="NIEL_AUTH_SESSION")
-@argument("rich-menu-id", nargs=1)
-def set_default(niel_auth_session: str, rich_menu_id: str) -> None:
-  """Set default rich menu identified by `rich_menu_id`
+def set_default(menu_id: str, niel_auth_session: str) -> None:
+  """Set default rich menu identified by `menu_id`
 
   Args:
-      rich_menu_id (str): _description_
+      menu_id (str): _description_
   """
-  print(niel_auth_session, rich_menu_id)
+  if not match(r"^richmenu-[0-9A-Za-z]{32}$", menu_id):
+    raise IOError(f"Given parameter '{ menu_id }' is malformed; Expected RichMenu identifier.")
+  line: Line = Line(channel_token=niel_auth_session)
+  response: Response = line.set_default_menu(menu_id)
+  print(response.status_code == 200)
 
 
 __all__ = ("set_default",)
