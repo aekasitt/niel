@@ -12,14 +12,20 @@
 """Module defining `default` command for `niel` cli"""
 
 ### Third-party packages ###
-from click import argument, command
+from click import argument, command, option
+from httpx import Response
+
+### Local modules ###
+from niel.client import Line
 
 
 @command
-@argument("rich-menu-id", nargs=1)
-def default(rich_menu_id: str) -> None:
+@argument("niel-auth-session", envvar="NIEL_AUTH_SESSION")
+def default(niel_auth_session: str) -> None:
   """Show default rich menu identifier"""
-  print(rich_menu_id)
+  line: Line = Line(channel_token=niel_auth_session)
+  response: Response = line.default_menu()
+  print(response.json()["richMenuId"])
 
 
 __all__ = ("default",)
