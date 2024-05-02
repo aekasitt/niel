@@ -14,7 +14,7 @@
 from click import group, version_option
 
 ### Local modules ###
-from niel.commands import auth, create, default, drop
+from niel.commands import auth, create, default, drop, set_default
 
 __version__ = "0.1.0"
 
@@ -29,6 +29,7 @@ cli.add_command(auth, "auth")
 cli.add_command(create, "create")
 cli.add_command(default, "default")
 cli.add_command(drop, "drop")
+cli.add_command(set_default, "set-default")
 
 if __name__ == "__main__":
   cli()
