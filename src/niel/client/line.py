@@ -75,7 +75,7 @@ class Line(BaseModel):
     Returns:
         BytesIO: _description_
     """
-    with Client(headers=self.headers) as client:
+    with Client(headers=self.headers, timeout=10) as client:
       response: Response = client.get(f"{self.data_endpoint}/message/{message_id}/content")
       return BytesIO(response.content)
 
