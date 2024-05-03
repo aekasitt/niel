@@ -6,11 +6,13 @@ requires = ['poetry-core']
 [tool.poetry]
 authors = ['Sitt Guruvanich <aekazitt+github@gmail.com>']
 description = 'Command line interface for handling LINE Rich menus via Messaging API'
+homepage = 'https://github.com/aekasitt/niel'
 license = 'MIT'
 name = 'niel'
 packages = [{from='src', include='niel'}]
 version = '0.1.0'
 readme = 'README.md'
+repository = 'https://github.com/aekasitt/niel'
 
 
 [tool.poetry.dependencies]
