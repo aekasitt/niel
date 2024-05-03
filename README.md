@@ -1,6 +1,6 @@
 # NIEL
 
-## Command line interface for handling LINE Rich menus via Messaging API
+[![Niel Banner](static/niel-banner.svg)](https://github.com/aekasitt/niel/static/niel-banner.svg)
 
 ```bash
 $ pip install niel
