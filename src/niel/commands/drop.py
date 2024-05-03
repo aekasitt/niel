@@ -26,7 +26,7 @@ from niel.client import Line
 @argument("menu-id", nargs=1)
 @argument("niel-auth-session", envvar="NIEL_AUTH_SESSION")
 def drop(menu_id: str, niel_auth_session: str) -> None:
-  """Drop rich menu identified by `menu_id`
+  """Drop rich menu identified by `menu-id`
 
   Args:
       menu_id (str): _description_

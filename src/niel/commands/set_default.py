@@ -26,7 +26,7 @@ from niel.client import Line
 @argument("menu-id", nargs=1)
 @argument("niel-auth-session", envvar="NIEL_AUTH_SESSION")
 def set_default(menu_id: str, niel_auth_session: str) -> None:
-  """Set default rich menu identified by `menu_id`
+  """Set default rich menu identified by `menu-id`
 
   Args:
       menu_id (str): _description_

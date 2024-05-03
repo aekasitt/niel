@@ -22,7 +22,7 @@ from niel.client import Line
 @command
 @argument("niel-auth-session", envvar="NIEL_AUTH_SESSION")
 def default(niel_auth_session: str) -> None:
-  """Show default rich menu identifier"""
+  """Show default RichMenu identifier"""
   line: Line = Line(channel_token=niel_auth_session)
   response: Response = line.default_menu()
   print(response.json()["richMenuId"])

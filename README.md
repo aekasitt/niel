@@ -18,9 +18,9 @@ $ niel
 >   auth         Start an authenticated session
 >   create       Create a new rich menu
 >   default      Show default rich menu identifier
->   drop         Drop rich menu identified by `menu_id`
+>   drop         Drop rich menu identified by `menu-id`
 >   image        Upload an image found by given `image-path` for the...
->   set-default  Set default rich menu identified by `menu_id
+>   set-default  Set default rich menu identified by `menu-id`
 ```
 
 Authenticate session (janky)
