@@ -33,6 +33,9 @@ venv.bak/
 dmypy.json
 
 
+### file storing pypi-token for current project ###
+pypi-token.pypi
+
 ### ruff ###
 .ruff_cache/
 
