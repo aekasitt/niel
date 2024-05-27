@@ -49,6 +49,7 @@ found in the appendix. The basics of a RichMenu object definition is as such:
 
 <details>
 <summary>RichMenu Schema</summary>
+
 ```typescript
 RichMenu {
   areas: [{
