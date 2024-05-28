@@ -18,6 +18,7 @@ from typing import List
 
 ### Third-party packages ###
 from click import argument, command
+from rich import print
 
 
 @command

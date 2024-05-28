@@ -14,6 +14,7 @@
 ### Third-party packages ###
 from click import argument, command, option
 from httpx import Response
+from rich import print
 
 ### Local modules ###
 from niel.client import Line

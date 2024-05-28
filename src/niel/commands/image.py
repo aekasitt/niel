@@ -17,6 +17,7 @@ from re import match
 ### Third-party packages ###
 from click import Path, argument, command
 from httpx import Response
+from rich import print
 
 ### Local modules ###
 from niel.client import Line

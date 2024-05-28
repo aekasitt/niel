@@ -18,6 +18,7 @@ from io import BytesIO
 from click import File, argument, command
 from httpx import Response
 from pydantic import TypeAdapter
+from rich import print
 from yaml import Loader, load
 
 ### Local modules ###
