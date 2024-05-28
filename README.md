@@ -135,6 +135,7 @@ as such.
 * [click](https://github.com/pallets/click) - Python composable command line interface toolkit
 * [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python. 🦋
 * [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints
+* [rich](https://github.com/Textualize/rich) - Rich text and beautiful formatting in the terminal
 * [yaml](https://github.com/yaml/pyyaml) - Canonical source repository for PyYAML
 
 ## Contributions
