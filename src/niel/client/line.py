@@ -79,6 +79,15 @@ class Line(BaseModel):
       response: Response = client.get(f"{self.data_endpoint}/message/{message_id}/content")
       return BytesIO(response.content)
 
+  def menus(self) -> Response:
+    """List RichMenu items defined on channel.
+
+    Returns:
+        Response: _description_
+    """
+    with Client(headers=self.headers) as client:
+      return client.get(f"{self.endpoint}/richmenu/list")
+
   def set_default_menu(self, rich_menu_id: str) -> Response:
     """Sets default rich menu for all users to one identified by `rich_menu_id`
 

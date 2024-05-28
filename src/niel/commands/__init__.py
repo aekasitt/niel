@@ -16,6 +16,8 @@ from niel.commands.create import create
 from niel.commands.default import default
 from niel.commands.drop import drop
 from niel.commands.image import image
+from niel.commands.list_menus import list_menus
 from niel.commands.set_default import set_default
+from niel.commands.user import user
 
-__all__ = ("auth", "create", "default", "drop", "image", "set_default")
+__all__ = ("auth", "create", "default", "drop", "image", "list_menus", "set_default", "user")
