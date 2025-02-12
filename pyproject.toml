@@ -28,10 +28,10 @@ description = 'Command line interface for handling LINE Rich menus via Messaging
 homepage = 'https://github.com/aekasitt/niel'
 license = 'MIT'
 name = 'niel'
-version = '0.1.0'
 readme = 'README.md'
 requires-python = '>=3.9'
 repository = 'https://github.com/aekasitt/niel'
+version = '0.1.0'
 
 
 [project.scripts]
