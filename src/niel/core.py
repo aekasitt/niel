@@ -14,9 +14,8 @@
 from click import group, version_option
 
 ### Local modules ###
+from niel import __version__
 from niel.commands import auth, create, default, drop, image, list_menus, set_default, user
-
-__version__ = "0.1.0"
 
 
 @group
@@ -30,7 +29,7 @@ cli.add_command(create, "create")
 cli.add_command(default, "default")
 cli.add_command(drop, "drop")
 cli.add_command(image, "image")
-cli.add_command(list_menus,"list")
+cli.add_command(list_menus, "list")
 cli.add_command(set_default, "set-default")
 cli.add_command(user, "user")
 

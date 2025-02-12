@@ -1,6 +1,6 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python3.9
 # coding:utf-8
-# Copyright (C) 2024 All rights reserved.
+# Copyright (C) 2024-2025, All rights reserved.
 # FILENAME:    ~~/src/niel/commands/auth.py
 # VERSION:     0.1.0
 # CREATED:     2024-02-26 23:09
@@ -41,7 +41,7 @@ def auth(line_channel_access_token: str) -> None:
     return
   if line_channel_access_token is not None:
     with open(path.expanduser(rc_path), "a") as rc_output:
-      rc_output.write(f"export NIEL_AUTH_SESSION={ line_channel_access_token }\n")
+      rc_output.write(f"export NIEL_AUTH_SESSION={line_channel_access_token}\n")
   print("Success!")
 
 

@@ -1,6 +1,6 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python3.9
 # coding:utf-8
-# Copyright (C) 2024 All rights reserved.
+# Copyright (C) 2024-2025, All rights reserved.
 # FILENAME:    ~~/src/niel/commands/set_default.py
 # VERSION:     0.1.0
 # CREATED:     2024-05-03 02:03
@@ -33,7 +33,7 @@ def set_default(menu_id: str, niel_auth_session: str) -> None:
       menu_id (str): _description_
   """
   if not match(r"^richmenu-[0-9A-Za-z]{32}$", menu_id):
-    raise IOError(f"Given parameter '{ menu_id }' is malformed; Expected RichMenu identifier.")
+    raise IOError(f"Given parameter '{menu_id}' is malformed; Expected RichMenu identifier.")
   line: Line = Line(channel_token=niel_auth_session)
   response: Response = line.set_default_menu(menu_id)
   print(response.status_code == 200)
