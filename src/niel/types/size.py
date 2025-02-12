@@ -2,7 +2,7 @@
 # coding:utf-8
 # Copyright (C) 2024-2025, All rights reserved.
 # FILENAME:    ~~/src/niel/types/size.py
-# VERSION:     0.1.0
+# VERSION:     0.1.1
 # CREATED:     2024-04-30 14:52
 # AUTHOR:      Sitt Guruvanich <aekazitt+github@gmail.com>
 # DESCRIPTION:

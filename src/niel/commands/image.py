@@ -2,7 +2,7 @@
 # coding:utf-8
 # Copyright (C) 2024-2025, All rights reserved.
 # FILENAME:    ~~/src/niel/commands/image.py
-# VERSION:     0.1.0
+# VERSION:     0.1.1
 # CREATED:     2024-05-03 02:25
 # AUTHOR:      Sitt Guruvanich <aekazitt+github@gmail.com>
 # DESCRIPTION:

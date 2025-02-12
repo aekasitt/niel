@@ -32,7 +32,7 @@ name = 'niel'
 readme = 'README.md'
 requires-python = '>=3.9'
 repository = 'https://github.com/aekasitt/niel'
-version = '0.1.0'
+version = '0.1.1'
 
 
 [project.scripts]
