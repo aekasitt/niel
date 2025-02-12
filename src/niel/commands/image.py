@@ -34,6 +34,7 @@ def image(image_path: str, menu_id: str, niel_auth_session) -> None:
   Args:
       image (str): _description_
       menu_id (str): _description_
+      niel_auth_session (str): derive from environment variable $NIEL_AUTH_SESSION if not provided
   """
   if not match(r"^[\-\/0-9A-Z_a-z]+.png$", image_path):
     raise IOError(f"Given parameter '{image_path}' is malformed; Expected PNG-image file.")
