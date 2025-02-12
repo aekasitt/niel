@@ -5,7 +5,7 @@ requires = [ 'hatchling' ]
 
 [project]
 authors = [
-  { email='aekazitt+github@gmail.com', name='Sitt Guruvanich'},
+  { email='aekazitt+github@gmail.com', name='Sitt Guruvanich' },
 ]
 classifiers = [
   'Framework :: AsyncIO',
