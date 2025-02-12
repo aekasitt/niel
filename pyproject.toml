@@ -38,6 +38,13 @@ version = '0.1.0'
 niel = 'niel.core:cli'
 
 
+[tool.mypy]
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+
 [tool.ruff]
 indent-width = 2
 line-length = 100
@@ -50,6 +57,6 @@ target-version = 'py39'
 
 [tool.uv]
 dev-dependencies = [
-  'mypy >=1.8.0',
+  "mypy>=1.8.0",
   'ruff >=0.3.7',
 ]
