@@ -43,6 +43,7 @@ pypi-token.pypi
 ### workspace settings ###
 .idea
 .vscode
+.ignore
 
 
 ### example yaml file ###
