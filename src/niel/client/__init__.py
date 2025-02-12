@@ -9,6 +9,7 @@
 #
 # HISTORY:
 # *************************************************************
+"""Module indicating `src.niel` is a python module directory"""
 
 ### Local modules ###
 from niel.client.line import Line
