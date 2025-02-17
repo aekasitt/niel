@@ -36,7 +36,7 @@ version = '0.1.1'
 
 
 [project.scripts]
-niel = 'niel.core:cli'
+niel = 'niel.core:niel'
 
 
 [tool.mypy]
@@ -44,6 +44,17 @@ disallow_incomplete_defs = true
 disallow_untyped_calls = true
 disallow_untyped_defs = true
 ignore_missing_imports = true
+
+
+[tool.pytest.ini_options]
+addopts = [
+  '--capture=sys',  # capture sysout messages
+  '--strict-markers',
+  '--tb=short',  # traceback
+]
+python_files = '*.py'
+pythonpath = [ 'src' ]
+testpaths = [ 'tests' ]
 
 
 [tool.ruff]
@@ -59,5 +70,6 @@ target-version = 'py39'
 [tool.uv]
 dev-dependencies = [
   "mypy>=1.8.0",
+  "pytest>=8.3.4",
   'ruff >=0.3.7',
 ]
