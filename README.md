@@ -142,16 +142,72 @@ as such.
 
 Unless LINE Messaging API changes, no planned changes on the project.
 But if you want to try your hand at the project, here is the recommended
-set-up for your local development environmnet.
+set-up for your local development environment.
 
-```sh
-$ pip install poetry
-> ...
-$ poetry shell
-> ...
-$ poetry install --with dev  # Install with development dependencies
-> ...
-```
+### Prerequisites
+
+* [pyenv](https://github.com/pyenv/pyenv) - simple Python version management
+* [uv](https://docs.astral.sh/uv) - extremely fast Python package & project manager written in Rust
+
+### Set up local environment
+
+The following guide walks through setting up your local working environment using `pyenv`
+as Python version manager and `uv` as Python package manager. If you do not have `pyenv`
+installed, run the following command.
+
+<details>
+  <summary> Install using Homebrew (Darwin) </summary>
+  
+  ```sh
+  brew install pyenv --head
+  ```
+</details>
+
+<details>
+  <summary> Install using standalone installer (Darwin and Linux) </summary>
+  
+  ```sh
+  curl https://pyenv.run | bash
+  ```
+</details>
+
+If you do not have `uv` installed, run the following command.
+
+<details>
+  <summary> Install using Homebrew (Darwin) </summary>
+
+  ```sh
+  brew install uv
+  ```
+</details>
+
+<details>
+  <summary> Install using standalone installer (Darwin and Linux) </summary>
+
+  ```sh
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
+</details>
+
+
+Once you have `pyenv` Python version manager installed, you can
+install any version of Python above version 3.9 for this project.
+The following commands help you set up and activate a Python virtual
+environment where `uv` can download project dependencies from the `PyPI`
+open-sourced registry defined under `pyproject.toml` file.
+
+<details>
+  <summary> Set up environment and synchroniz project dependencies </summary>
+
+  ```sh
+  pyenv shell 3.11.9
+  uv venv  --python-preference system
+  source .venv/bin/activate
+  uv sync --dev
+  ```
+</details>
+
+### Development dependencies
 
 This project has two development dependencies as such:
 
