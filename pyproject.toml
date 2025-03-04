@@ -69,7 +69,7 @@ target-version = 'py39'
 
 [tool.uv]
 dev-dependencies = [
-  "mypy>=1.8.0",
-  "pytest>=8.3.4",
+  'mypy >=1.8.0',
+  'pytest >=8.3.4',
   'ruff >=0.3.7',
 ]
